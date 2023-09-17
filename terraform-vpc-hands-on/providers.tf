@@ -1,13 +1,20 @@
 terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "4.46.0"
+  cloud {
+    organization = "vashisthavinod_org"
+
+    workspaces {
+      name = "Terraform"
     }
   }
+  required_providers {
+          aws = {
+          source = "hashicorp/aws"
+          version = "~> 4.16"
+    }
+  }
+  required_version = ">= 1.2.0"
 }
 
 provider "aws" {
-  region  = "us-east-1"
-  profile = "aws-creds"
+ region = "ap-south-1"
 }
