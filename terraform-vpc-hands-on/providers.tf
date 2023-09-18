@@ -16,5 +16,11 @@ terraform {
 }
 
 provider "aws" {
- region = "ap-south-1"
+   region = "ap-south-1"
+   access_key = "AKIAZGVQVSDVQX7YUW6Y"
+   secret_key = "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"
+
+#  assume_role {
+#    role_arn = var.aws_role_arn
+#  }
 }
