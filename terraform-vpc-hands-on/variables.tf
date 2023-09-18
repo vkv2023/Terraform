@@ -14,7 +14,7 @@ variable "availability_zone" {
 
 variable "instance_ami" {
   type    = string
-  default = "ami-05552d2dcf89c9b24"
+  default = "ami-0700df939e7249d03"
 }
 
 variable "instance_size" {
