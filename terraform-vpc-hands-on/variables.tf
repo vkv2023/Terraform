@@ -22,10 +22,6 @@ variable "instance_size" {
   default = "t2.micro"
 }
 
-variable "aws_access_key" {
-   default = "AKIAZGVQVSDVQX7YUW6Y"
-}
+variable "aws_access_key" {}
 
-variable "aws_secret_key" {
-   default = "ZDFTwQsPv9Fy85ot1eYkVcCjktiffog0ZM+Gg78e"
-}
+variable "aws_secret_key" {}
