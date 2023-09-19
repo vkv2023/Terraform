@@ -22,6 +22,6 @@ variable "instance_size" {
   default = "t2.micro"
 }
 # Changing access key values
-variable "aws_access_key" {}
+variable "AWS_ACCESS_KEY_ID" {}
 
-variable "aws_secret_key" {}
+variable "AWS_ACCESS_SECRET_KEY" {}
