@@ -21,7 +21,7 @@ variable "instance_size" {
   type    = string
   default = "t2.micro"
 }
-
+# Changing access key values
 variable "aws_access_key" {}
 
 variable "aws_secret_key" {}
