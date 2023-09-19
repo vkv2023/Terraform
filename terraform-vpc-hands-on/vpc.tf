@@ -160,14 +160,22 @@ resource "aws_instance" "my_app_server" {
 
   user_data = <<-EOF
   #!/bin/bash
-  sudo apt update -y
-  sudo apt install apache2 -y
-  sudo systemctl start apache2
-  sudo systemctl enable apache2
-  sudo apt install git -y
-  git clone https://github.com/palakbhawsar98/FirstWebsite.git
-  cd /FirstWebsite
-  sudo cp index.html /var/www/html/
+  #!/bin/bash
+  sudo su
+  yum update -y
+  yum install -y httpd
+  service httpd start
+  chkconfig httpd on
+  echo "Hello World from Instances My app servers…"  > /var/www/html/index.html
+
+  #sudo apt update -y
+  #sudo apt install apache2 -y
+  #sudo systemctl start apache2
+  #sudo systemctl enable apache2
+  #sudo apt install git -y
+  #git clone https://github.com/palakbhawsar98/FirstWebsite.git
+  #cd /FirstWebsite
+  #sudo cp index.html /var/www/html/
   EOF
 
   tags = {
